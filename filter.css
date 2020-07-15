@@ -1,0 +1,12 @@
+canvas{
+
+  height:200px;
+  border: 1px solid black;
+}
+input{
+  text-size:14pt;
+  background: orange;
+}
+body{
+  background-color:#D15151;
+}

@@ -1,0 +1,25 @@
+// write your code here
+// write your code here
+var img= new SimpleImage("hilton.jpg");
+print(img);
+var w=img.getWidth();
+ print(w);
+for(var pixel of img.values())
+{
+    if(pixel.getX()<=46.6)
+    pixel.setRed(255);
+    else if(pixel.getX()<=93)
+    pixel.setGreen(255);
+    else
+    pixel.setBlue(255);
+  }
+print(img);
+function swap(image){
+    for(var pixel of image.values())
+    {
+    pixel.setRed(pixel.getGreen());
+    pixel.setGreen(pixel.getRed());
+}
+}
+swap(img);
+print(img);

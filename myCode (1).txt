@@ -1,0 +1,16 @@
+// write your code here
+var fgimg=new SimpleImage("drewRobert.png");
+var bgimg=new SimpleImage("drewRobertDinos.png");
+var output=new SimpleImage(fgimg.getWidth(),fgimg.getHeight());
+for(var pixel of fgimg.values()){
+    if(pixel.getGreen()>pixel.getBlue()+pixel.getRed()){
+        var x=pixel.getX();
+        var y=pixel.getY();
+        var bgpixel=bgimg.getPixel(x,y);
+        output.setPixel(x,y,bgpixel);
+    }
+    else{
+        output.setPixel(pixel.getX(),pixel.getY(),pixel);
+    }
+}
+print(output);
